@@ -6,8 +6,8 @@ Make a HTTP GET request to `<api-url>/`. The request body should be JSON.
 
 This API accepts the following parameters:
 
-**url**: The Wikipedia page to parse
-**skiprows**: (Defaults to 0) The number of rows to skip. This is usually 0 but
+- **url**: The Wikipedia page to parse
+- **skiprows**: (Defaults to 0) The number of rows to skip. This is usually 0 but
 some pages have tables with useless rows at the top.
 
 ### Example Request
