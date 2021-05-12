@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=['POST'])
 def scrape_wiki():
     """
     Parses the HTML at the requested URL for <table> elements. It then calls a helper function to convert that HTML into

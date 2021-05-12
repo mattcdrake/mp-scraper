@@ -2,13 +2,14 @@
 
 ## Request
 
-Make a HTTP GET request to `<api-url>/`. The request body should be JSON.
+Make a HTTP POST request to `https://python-build-app.ue.r.appspot.com`. The
+request body should be JSON.
 
 This API accepts the following parameters:
 
 - **url**: The Wikipedia page to parse
-- **skiprows**: (Defaults to 0) The number of rows to skip. This is usually 0 but
-some pages have tables with useless rows at the top.
+- **skiprows**: (Defaults to 0) The number of rows to skip. This is usually 0
+  but some pages have tables with useless rows at the top.
 
 ### Example Request
 
@@ -21,16 +22,16 @@ some pages have tables with useless rows at the top.
 
 ## Response
 
-The API will send a JSON response where each table is an array of objects, starting
-with index 0. So, the first table will be the array at index 0. The second, 1,
-and so on.
+The API will send a JSON response where each table is an array of objects,
+starting with index 0. So, the first table will be the array at index 0. The
+second, 1, and so on.
 
 Within a table, each row is represented as an object. If the table has column
 titles, that will be the first object in the array.
 
-`bad_tables` will inform the caller of the number of tables that have malformed 
-`<table>` elements and cannot be parsed by the API. Due to the nature of Wikipedia,
-this is somewhat common.
+`bad_tables` will inform the caller of the number of tables that have malformed
+`<table>` elements and cannot be parsed by the API. Due to the nature of
+Wikipedia, this is somewhat common.
 
 ### Example Response
 
