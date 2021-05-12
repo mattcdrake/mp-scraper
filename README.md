@@ -36,7 +36,7 @@ this is somewhat common.
 
 ```json
 {
-"bad_tables": 0,
+    "bad_tables": 0,
     "0": [
         {
             "0": "Release date",
